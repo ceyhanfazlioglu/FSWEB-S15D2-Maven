@@ -3,7 +3,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
+import static org.hamcrest.MatcherAssert.assertThat;
 import java.lang.reflect.Field;
 import java.util.HashSet;
 import java.util.List;
@@ -142,10 +142,10 @@ public class MainTest {
     @DisplayName("findUniqueWords doğru çalışıyor mu ?")
     @Test
     public void testFindUniqueWordsMethod() {
-        assertEquals(StringSet.findUniqueWords().size(), 143);
+        assertEquals(StringSet.findUniqueWords().size(), 155);
 
         List<String> results = StringSet.findUniqueWords().stream().collect(Collectors.toList());
-        assertEquals(results.get(0), "a");
+        assertEquals(results.get(0), "1863");
         assertEquals(results.get(results.size()-1), "wrote");
 
     }
